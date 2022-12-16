@@ -19,11 +19,8 @@ std::string palindrome_check(int N)
 	std::string first_str  = num_str.substr(0, num_str.length()/2);
 	std::string second_str = num_str.substr(num_str.length()/2);
 
-	// std::cout<<first_str.length()<<std::endl;
-
 	for(int i = 0; i < first_str.length() ; i++)
 	{
-		// std::cout<<first_str[i]<<second_str[first_str.length()-i-1];
 		if(first_str[i]!=second_str[first_str.length()-i-1])
 		{
 			return "NO";
@@ -47,7 +44,7 @@ int main()
 		for(int j = pow(10, N); j > pow(10, N-1) ; j--)
 		{	
 			int prod = i*j;
-			
+
 			if(how_many_digits(prod) == N*2)
 			{
 				if(palindrome_check(prod) == "yes")
